@@ -1,50 +1,11 @@
+import { links } from "./Links";
+
 export const founderVault = [
-  {
-    title: "Founder CCE Vault (in build)",
-    subtitle: "Founder-only master document vault (private tool)",
-    href: "#",
-    tag: "DRAFT",
-  },
-  {
-    title: "CCE Architecture (private)",
-    subtitle: "Architecture engine (internal founder workspace)",
-    href: "#",
-    tag: "PRIVATE",
-  },
-  {
-    title: "CCE Visual (private)",
-    subtitle: "Visual content engine (internal founder workspace)",
-    href: "#",
-    tag: "PRIVATE",
-  },
-  {
-    title: "CCE Audio (private)",
-    subtitle: "Audio/ad engine (internal founder workspace)",
-    href: "#",
-    tag: "PRIVATE",
-  },
-  {
-    title: "CCE Artistic (private)",
-    subtitle: "2D/3D artistic engine (internal founder workspace)",
-    href: "#",
-    tag: "PRIVATE",
-  },
-  {
-    title: "CCE Marketing Hub (placeholder)",
-    subtitle: "Marketing command + distribution engine",
-    href: "#",
-    tag: "DRAFT",
-  },
-  {
-    title: "Persona & Avatar Lab (placeholder)",
-    subtitle: "Bots, personas, callbots/zoombots templates",
-    href: "#",
-    tag: "DRAFT",
-  },
-  {
-    title: "Vertex Technical (internal)",
-    subtitle: "Internal tool (not launching yet)",
-    href: "#",
-    tag: "INTERNAL",
-  },
+  { title: "CCE Architecture (private)", subtitle: "...", href: links.cceArchitecture, tag: "PRIVATE" },
+  { title: "CCE Visual (private)", subtitle: "...", href: links.cceVisual, tag: "PRIVATE" },
+  { title: "CCE Audio (private)", subtitle: "...", href: links.cceAudio, tag: "PRIVATE" },
+  { title: "CCE Artistic (private)", subtitle: "...", href: links.cceArtistic, tag: "PRIVATE" },
+  { title: "CCE Marketing Hub (private tool)", subtitle: "...", href: links.cceMarketingHub, tag: "INTERNAL" },
+  { title: "Founder CCE Vault (in build)", subtitle: "...", href: links.founderCceVault, tag: "DRAFT" },
+  { title: "Founder Tai Chi Engine (3D Advanced)", subtitle: "12/24/28/48/108/…", href: links.founderTaiChi3D, tag: "DRAFT" },
 ];
