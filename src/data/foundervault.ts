@@ -1,16 +1,33 @@
-export type VaultApp = {
-  title: string;
-  subtitle?: string;
-  href: string;
-  tag?: string;
-};
-
-export const founderVault: VaultApp[] = [
+export const founderVault = [
   {
-    title: "Founder CCE Vault (placeholder)",
-    subtitle: "Founder-only document vault (private tool)",
+    title: "Founder CCE Vault (in build)",
+    subtitle: "Founder-only master document vault (private tool)",
     href: "#",
     tag: "DRAFT",
+  },
+  {
+    title: "CCE Architecture (private)",
+    subtitle: "Architecture engine (internal founder workspace)",
+    href: "#",
+    tag: "PRIVATE",
+  },
+  {
+    title: "CCE Visual (private)",
+    subtitle: "Visual content engine (internal founder workspace)",
+    href: "#",
+    tag: "PRIVATE",
+  },
+  {
+    title: "CCE Audio (private)",
+    subtitle: "Audio/ad engine (internal founder workspace)",
+    href: "#",
+    tag: "PRIVATE",
+  },
+  {
+    title: "CCE Artistic (private)",
+    subtitle: "2D/3D artistic engine (internal founder workspace)",
+    href: "#",
+    tag: "PRIVATE",
   },
   {
     title: "CCE Marketing Hub (placeholder)",
