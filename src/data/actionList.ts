@@ -1,93 +1,62 @@
-export type ActionStatus = "DONE" | "IN_PROGRESS" | "NEEDS_FOUNDER" | "ON_HOLD";
+export type ActionStage = "SETUP" | "R&D" | "EXEC" | "LAUNCH" | "DEPLOY" | "MARKETING";
+export type ActionStatus = "IN_PROGRESS" | "ON_HOLD" | "NEEDS_FOUNDER" | "PARKED" | "DONE";
 
 export type ActionItem = {
-  id: string;
-  phase: "PHASE_1" | "PHASE_2" | "PHASE_3" | "PHASE_4";
-  area: "Founder HQ" | "CC Engines" | "Persona & Avatar Lab" | "Marketing" | "Founders Domains" | "Studios" | "BuildLogic" | "FlowForm";
   title: string;
+  subtitle: string;
   status: ActionStatus;
-  percent: number;
-  eta: string;
-  notes?: string;
+  stage: ActionStage;
+  mechHours: number; // mechanical realisation time only
+  owner?: string;
 };
 
 export const actionList: ActionItem[] = [
-  // PHASE 2 (ACTIVE)
   {
-    id: "A-001",
-    phase: "PHASE_2",
-    area: "Founder HQ",
-    title: "Dashboard on Home (snapshot + action list + parked domains)",
+    title: "Dashboard and Home (snapshot + action list + parked domain)",
+    subtitle: "Founder HQ / PHASE 2",
     status: "IN_PROGRESS",
-    percent: 60,
-    eta: "Today",
+    stage: "EXEC",
+    mechHours: 1.0,
+    owner: "System",
   },
   {
-    id: "A-002",
-    phase: "PHASE_2",
-    area: "Founder HQ",
     title: "Founder Avatars tab (Oracle, Grandmaster, Promoter, Legal, Asset, Psychologist)",
+    subtitle: "Founder HQ / PHASE 2",
     status: "IN_PROGRESS",
-    percent: 30,
-    eta: "Today",
+    stage: "EXEC",
+    mechHours: 0.75,
+    owner: "System",
   },
   {
-    id: "A-003",
-    phase: "PHASE_2",
-    area: "CC Engines",
-    title: "Wire CC Engines tiles in Founder Vault (Architecture/Visual/Audio/Artistic/Marketing/Vault in build)",
-    status: "NEEDS_FOUNDER",
-    percent: 80,
-    eta: "0.5 day",
-    notes: "Confirm URLs / repos for each engine when ready.",
+    title: "Wire CCE engines in Founder Vault (Architecture/Visual/Audio/Artistic/Marketing/Vault in build)",
+    subtitle: "CC Engines / PHASE 2",
+    status: "IN_PROGRESS",
+    stage: "EXEC",
+    mechHours: 1.5,
+    owner: "System",
   },
-
-  // PHASE 3 (NEXT)
   {
-    id: "A-010",
-    phase: "PHASE_3",
-    area: "Persona & Avatar Lab",
     title: "Activate Persona & Avatar Lab (bots first, non-revenue)",
+    subtitle: "Persona & Avatar Lab / PHASE 3",
     status: "ON_HOLD",
-    percent: 20,
-    eta: "1–2 days",
+    stage: "R&D",
+    mechHours: 2.0,
+    owner: "Founder",
   },
   {
-    id: "A-011",
-    phase: "PHASE_3",
-    area: "Marketing",
     title: "Create master ad template + 1–2 weeks content plan (NEC/JCT/FlowForm)",
+    subtitle: "Marketing / PHASE 3",
     status: "ON_HOLD",
-    percent: 10,
-    eta: "Parallel",
+    stage: "MARKETING",
+    mechHours: 3.0,
+    owner: "Founder",
   },
-
-  // FOUNDER ASSETS (TRACKED, PARKED)
   {
-    id: "A-100",
-    phase: "PHASE_4",
-    area: "Founders Domains",
     title: "Founder Tai Chi Engine (3D Advanced) – add as internal asset tile",
+    subtitle: "Founders Domains / PHASE 4",
     status: "ON_HOLD",
-    percent: 10,
-    eta: "Parallel / Jan",
-  },
-  {
-    id: "A-101",
-    phase: "PHASE_4",
-    area: "Founders Domains",
-    title: "Founder Wellbeing / Hobby / Timeout / Bucket List domains (tracked only)",
-    status: "ON_HOLD",
-    percent: 5,
-    eta: "Later",
-  },
-  {
-    id: "A-102",
-    phase: "PHASE_4",
-    area: "Founders Domains",
-    title: "Founder Cases + Assets/Worth + Apocalypse Plan (vault-first structure)",
-    status: "ON_HOLD",
-    percent: 5,
-    eta: "Later",
+    stage: "EXEC",
+    mechHours: 2.0,
+    owner: "Founder",
   },
 ];
