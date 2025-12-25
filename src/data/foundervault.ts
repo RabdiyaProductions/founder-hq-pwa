@@ -1,4 +1,4 @@
-import { links } from "./Links";
+import RequireAuth from "./RequireAuth";
 
 export const founderVault = [
   { title: "CCE Architecture (private)", subtitle: "...", href: links.cceArchitecture, tag: "PRIVATE" },
