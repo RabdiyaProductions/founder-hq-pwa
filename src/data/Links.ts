@@ -1,21 +1,19 @@
 export const links = {
-  // Live public PWAs
+  // Live public PWAs (external, public)
   necHub: "https://rabdiyaproductions.github.io/nec-hub-pwa/#/buildlogic-nec",
   jctHub: "https://rabdiyaproductions.github.io/jct-hub-pwa/",
-  flowform: "https://rabdiyaproductions.github.io/FlowForm-app/",
-  flowformHub: "https://rabdiyaproductions.github.io/flowform_hub_pwa/",
+  flowForm: "https://rabdiyaproductions.github.io/FlowForm-app/",
+  flowFormHub: "https://rabdiyaproductions.github.io/flowform_hub_pwa/",
 
-  // Activation placeholders for now
-  personaAvatarLab: "#",
+  // Founder internal apps (PRIVATE routes inside Founder HQ)
+  cceArchitecture: "/engine/cce-architecture",
+  cceVisual: "/engine/cce-visual",
+  cceAudio: "/engine/cce-audio",
+  cceArtistic: "/engine/cce-artistic",
+  cceMarketingHub: "/engine/cce-marketing-hub",
+  founderCCEVault: "/engine/founder-cce-vault",
+  founderTaiChi3D: "/engine/founder-tai-chi-3d",
 
-  // CCE engines (private placeholders until wired)
-  cceArchitecture: "#",
-  cceVisual: "#",
-  cceAudio: "#",
-  cceArtistic: "#",
-  cceMarketingHub: "#",
-
-  // Founder-only tools placeholders
-  founderCceVault: "#",
-  founderTaiChi3D: "#",
+  // Future
+  personaAvatarLab: "/avatars",
 } as const;

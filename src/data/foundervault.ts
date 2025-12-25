@@ -15,6 +15,6 @@ export const founderVault: VaultItem[] = [
 
   { title: "CCE Marketing Hub (private tool)", subtitle: "Tool (not monetised)", href: links.cceMarketingHub, tag: "INTERNAL" },
 
-  { title: "Founder CCE Vault (in build)", subtitle: "Founder-only document vault", href: links.founderCceVault, tag: "DRAFT" },
-  { title: "3D Tai Chi (Founder)", subtitle: "12/24/28/48/108…", href: links.founderTaiChi3D, tag: "DRAFT" },
+  { title: "Founder CCE Vault (in build)", subtitle: "Founder-only document vault", href: links.founderCCEVault, tag: "DRAFT" },
+  { title: "3D Tai Chi (Founder)", subtitle: "Advanced Tai Chi library", href: links.founderTaiChi3D, tag: "DRAFT" },
 ];
