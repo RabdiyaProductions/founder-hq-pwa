@@ -1,11 +1,12 @@
 import { Routes, Route, Link } from "react-router-dom";
-import Home from "./Home";
-import Login from "./Login";
-import Vault from "./Vault";
-import Platform from "./Platform";
-import Avatars from "./Avatars";
-import RequireAuth from "./RequireAuth";
-import Engine from "./Engine";
+
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Vault from "./pages/Vault";
+import Platform from "./pages/Platform";
+import Avatars from "./pages/Avatars";
+import RequireAuth from "./pages/RequireAuth";
+import Engine from "./pages/Engine";
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
           <Link to="/vault">Founder Vault</Link>
           <Link to="/platform">Platform PWAs</Link>
           <Link to="/avatars">Avatars</Link>
+          <Link to="/engine">Engine</Link>
           <Link to="/login">Login</Link>
         </nav>
       </header>
@@ -59,19 +61,22 @@ export default function App() {
             </RequireAuth>
           }
         />
-
-        {/* Founder internal engines (private, never public) */}
         <Route
-          path="/engine/:engineId"
-          element={
-            <RequireAuth>
-              <Engine />
-            </RequireAuth>
-          }
+  path="/engine"
+  element={
+    <RequireAuth>
+      <Engine />
+    </RequireAuth>
+  }
+/>
+<Route
+  path="/engine/:key"
+  element={
+    <RequireAuth>
+      <Engine />
+    </RequireAuth>
+  }
         />
-
-        {/* Fallback */}
-        <Route path="*" element={<Home />} />
       </Routes>
     </div>
   );
