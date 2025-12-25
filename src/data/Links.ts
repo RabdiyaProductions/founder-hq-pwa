@@ -5,7 +5,7 @@ export const links = {
   flowform: "https://rabdiyaproductions.github.io/FlowForm-app/",
   flowformHub: "https://rabdiyaproductions.github.io/flowform_hub_pwa/",
 
-  // Founder HQ / internal PWAs (placeholders for now)
+  // Activation placeholders for now
   personaAvatarLab: "#",
 
   // CCE engines (private placeholders until wired)
@@ -15,7 +15,7 @@ export const links = {
   cceArtistic: "#",
   cceMarketingHub: "#",
 
-  // Founder tools placeholders
-  founderCCEVault: "#",
+  // Founder-only tools placeholders
+  founderCceVault: "#",
   founderTaiChi3D: "#",
 } as const;
