@@ -1,5 +1,5 @@
-import { tierOrder } from "../data/tiers";
 import type { Tier } from "../data/tiers";
+import { tierOrder } from "../data/tiers";
 
 export default function TierBar({
   tier,

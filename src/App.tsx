@@ -5,8 +5,8 @@ import Login from "./pages/Login";
 import Vault from "./pages/Vault";
 import Platform from "./pages/Platform";
 import Avatars from "./pages/Avatars";
-import RequireAuth from "./pages/RequireAuth";
 import Engine from "./pages/Engine";
+import RequireAuth from "./pages/RequireAuth";
 
 export default function App() {
   return (
@@ -36,7 +36,6 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
 
-        {/* Protected */}
         <Route
           path="/vault"
           element={
@@ -45,6 +44,7 @@ export default function App() {
             </RequireAuth>
           }
         />
+
         <Route
           path="/platform"
           element={
@@ -53,6 +53,7 @@ export default function App() {
             </RequireAuth>
           }
         />
+
         <Route
           path="/avatars"
           element={
@@ -61,21 +62,14 @@ export default function App() {
             </RequireAuth>
           }
         />
+
         <Route
-  path="/engine"
-  element={
-    <RequireAuth>
-      <Engine />
-    </RequireAuth>
-  }
-/>
-<Route
-  path="/engine/:key"
-  element={
-    <RequireAuth>
-      <Engine />
-    </RequireAuth>
-  }
+          path="/engine/*"
+          element={
+            <RequireAuth>
+              <Engine />
+            </RequireAuth>
+          }
         />
       </Routes>
     </div>
